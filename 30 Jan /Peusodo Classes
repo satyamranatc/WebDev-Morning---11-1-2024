@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pseudo-class Examples</title>
+  <style>
+    /* Add the provided CSS code here */
+    /* Basic styling for demonstration */
+    div {
+      width: 100px;
+      height: 50px;
+      margin: 10px;
+      padding: 10px;
+      border: 1px solid #333;
+    }
+
+    /* :hover example - Changes the style when you move your mouse over something */
+    div:hover {
+      background-color: lightblue;
+    }
+
+    /* :active example - Styles applied while you click and hold on an element */
+    div:active {
+      transform: scale(1.1);
+    }
+
+    /* :focus example - Styles activated when you click into a form input or similar */
+    input:focus {
+      outline: 2px solid green;
+    }
+
+    /* :visited example - Changes the appearance of a link after you've clicked on it */
+    a:visited {
+      color: purple;
+    }
+
+    /* :nth-child example - Styles elements that are in a specific position in their parent */
+    ul li:nth-child(odd) {
+      background-color: #f0f0f0;
+    }
+
+    /* :first-child example - Styles the first element inside its parent */
+    p:first-child {
+      font-weight: bold;
+    }
+
+    /* :last-child example - Styles the last element inside its parent */
+    p:last-child {
+      color: red;
+    }
+
+    /* :first-of-type example - Styles the first element of a particular type inside its parent */
+    h2:first-of-type {
+      text-decoration: underline;
+    }
+
+    /* :last-of-type example - Styles the last element of a particular type inside its parent */
+    h2:last-of-type {
+      color: blue;
+    }
+
+    /* :not(selector) example - Styles elements that are not a certain type */
+    div:not(.special) {
+      opacity: 0.7;
+    }
+
+    /* :nth-last-child example - Styles elements that are in a specific position, counting from the end */
+    ul li:nth-last-child(2) {
+      background-color: #ffc0cb;
+    }
+
+    /* :nth-last-of-type example - Styles elements of a specific type in a particular position, counting from the end */
+    ul li:nth-last-of-type(2) {
+      color: #008080;
+    }
+
+    /* :only-child example - Styles an element that is the only one inside its parent */
+    span:only-child {
+      background-color: #ffd700;
+    }
+
+    /* :only-of-type example - Styles an element that is the only one of a particular type inside its parent */
+    h3:only-of-type {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <!-- HTML content to apply styles to -->
+  <div>Hover me</div>
+  <div>Click and hold me</div>
+  <input type="text" placeholder="Click here">
+  <a href="#">Visited Link</a>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+  <p>First Child</p>
+  <p>Last Child</p>
+  <h2>First of Type</h2>
+  <h2>Last of Type</h2>
+  <div class="special">Special Element</div>
+  <div>Normal Element</div>
+  <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+  <span>Only Child</span>
+  <h3>Only of Type</h3>
+</body>
+</html>
