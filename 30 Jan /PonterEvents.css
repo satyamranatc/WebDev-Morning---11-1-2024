@@ -1,0 +1,73 @@
+
+
+```css
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+/* Styles for the commented-out radio input section */
+/* #Main {...} */
+/* #Main span {...} */
+/* #Main label {...} */
+/* input[type="radio"] {...} */
+/* input[type="radio"]:checked {...} */
+
+/* Styles for the main container and boxes */
+.Main {
+    /* Enables pointer events for the main container */
+    pointer-events: auto;
+    margin: 100px auto;
+    height: 400px;
+    width: 400px;
+    background: transparent;
+    color: black;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#Box1 {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background: teal;
+    /* z-index: -1; */
+}
+
+#Box1:hover {
+    background-color: red;
+}
+
+#Box2 {
+    position: relative;
+    height: 180px;
+    width: 180px;
+    background: transparent;
+    border: 2px solid white;
+    /* z-index: -1; */
+    
+    /* Prevents pointer events on Box2, allowing interactions with elements underneath */
+    pointer-events: none;
+
+    position: absolute;
+    top: 170px;
+}
+```
+
+### Notes:
+- The `pointer-events` property in `.Main` is set to `auto`, allowing the main container to receive pointer events.
+- In `#Box2`, `pointer-events: none;` is used, preventing it from capturing pointer events. This allows interactions with elements underneath `Box2`.
+- This property is useful for controlling the interaction behavior of an element with regards to mouse events. Setting it to `none` makes an element "transparent" to pointer events.
