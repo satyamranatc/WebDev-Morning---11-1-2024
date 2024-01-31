@@ -1,0 +1,97 @@
+/* 
+   Simple Explanation:
+   - This code creates a styled box that does something interesting when you hover over it.
+
+   Pseudo-elements:
+   - There are two invisible layers added to the box, one at the top and one at the bottom.
+   - These layers start with no width (invisible) and are initially hidden.
+   - When you hover over the box, these layers gradually become visible, expanding to cover the entire width of the box from top and bottom.
+   - It creates a smooth and stylish reveal effect on hover, giving the box a dynamic appearance.
+*/
+
+/* 
+
+::before and ::after are CSS pseudo-elements that allow you to add content or styling before and after the actual content of an element without modifying the HTML.
+
+::before: Adds content or styling before the actual content of an element.
+::after: Adds content or styling after the actual content of an element.
+Imagine you have a box (HTML element) on a webpage. Using ::before, you can attach an invisible element or style before the box, and using ::after, you can do the same after the box. It's a way to enhance the visual presentation or structure of elements without altering the core HTML.
+
+
+*/
+
+
+
+
+
+
+/* Reset default margin, padding, and box-sizing for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set the overall styling for the body */
+body {
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+}
+
+/* Styling for the main box */
+#Box {
+  height: 300px;
+  width: 300px;
+  background-color: teal;
+  margin: 200px auto;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 55px;
+  position: relative;
+  transition: 0.3s; /* Add transition for smooth effect */
+}
+
+/* Styling for the bottom pseudo-element */
+#Box::after {
+  content: '';
+  position: absolute;
+  height: 1%;
+  width: 0%;
+  bottom: 0;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s; /* Add transition for smooth effect */
+  left: 0;
+}
+
+/* Transition effect on hover for the bottom pseudo-element */
+#Box:hover::after {
+  width: 100%;
+}
+
+/* Styling for the top pseudo-element */
+#Box::before {
+  content: '';
+  position: absolute;
+  height: 1%;
+  width: 0%;
+  top: 0;
+  background-color: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s; /* Add transition for smooth effect */
+  right: 0;
+}
+
+/* Transition effect on hover for the top pseudo-element */
+#Box:hover::before {
+  width: 100%;
+}
