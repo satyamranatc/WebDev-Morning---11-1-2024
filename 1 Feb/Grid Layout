@@ -1,0 +1,124 @@
+https://docs.google.com/document/d/1yHusvU-C2YWw3PNq--yXGOGUoyK2T7n71NAGdzW1atM/edit?usp=sharing
+
+
+
+Code:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Site</title>
+    <link rel="stylesheet" href="./Demo.css">
+</head>
+<body>
+
+    <div id="Main">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    
+</body>
+</html>
+
+
+
+
+--------Css------
+
+
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+
+#Main{
+    height: 100vh;
+    width: 100%;
+    border: 5px solid teal;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: .3fr 1fr 1fr;
+}
+
+.item
+{
+    border: 2px solid white;
+    background-color: teal;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+.item:nth-child(1)
+{
+    color: black;
+    background-color: white;
+
+
+
+    grid-column-start: 1;
+
+
+    grid-row-start: 1;
+    grid-row-end: 5;
+    border: 1px solid black;
+}
+
+.item:nth-child(2)
+{
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+    
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+
+}
+
+.item:nth-child(3)
+{
+    color: black;
+    border: 1px solid black;
+    background-color: white;
+    
+    grid-column-start: 2;
+    grid-column-end: 5;
+
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+.item:nth-child(4)
+{
+    color: black;
+    border: 1px solid black;
+    background-color: greenyellow;
+    
+
+
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+
+}
